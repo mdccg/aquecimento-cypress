@@ -1,0 +1,15 @@
+{
+  "name": "aquecimento-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mdccg/aquecimento-cypress",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open",
+    "nem-que-a-vaca-tussa": "npx cowsay cof cof"
+  },
+  "devDependencies": {
+    "cypress": "^12.5.1",
+    "typescript": "^4.9.5"
+  }
+}

@@ -34,11 +34,13 @@ const main = () => {
   addPersonButton.classList.add('person-button');
   addPersonButton.type = 'button';
   addPersonButton.onclick = addPerson;
+  addPersonButton.id = 'add-person-button';
 
   clearListButton.innerText = 'Limpar';
   clearListButton.classList.add('person-button');
   clearListButton.type = 'button';
   clearListButton.onclick = clearList;
+  clearListButton.id = 'clear-list-button';
 
   peopleList.id = 'people-list';
 
