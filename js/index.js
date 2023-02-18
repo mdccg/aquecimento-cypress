@@ -12,7 +12,7 @@ const addPerson = () => {
 }
 
 const clearList = () => {
-  const peopleList = $('ul');
+  const peopleList = document.querySelector('ul');
   peopleList.innerHTML = '';
 }
 

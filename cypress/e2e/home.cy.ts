@@ -1,10 +1,9 @@
 describe('Home page specs', () => {
-  beforeEach(() => cy.visit('http://127.0.0.1:5500/'));
+  beforeEach(() => cy.visit(''));
 
-  it('should add person to list after clicking add button', () => {
+  it('should add person with at least two names to list after clicking add button', () => {
     const addPersonButton = cy.get('#add-person-button');
     addPersonButton.click();
-    
     const firstItemList = cy.get('#people-list > :nth-child(1)');
     firstItemList
       .invoke('text')
@@ -14,5 +13,15 @@ describe('Home page specs', () => {
       });
   });
 
+  it('should add N people to list after N clicks to add person button', () => {
+    const N = 10;
+    cy.addNPeople(N);
+    cy.get('#people-list').find('li').should('have.length', N);
+  });
 
+  it('should clear the list after clicking the clear button', () => {
+    cy.addNPeople(10);
+    cy.get('#clear-list-button').click();
+    cy.get('#people-list').find('li').should('have.length', 0);
+  });
 });
