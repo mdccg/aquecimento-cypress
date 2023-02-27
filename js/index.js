@@ -24,7 +24,7 @@ const main = () => {
   const clearListButton = document.createElement('button');
   const peopleList = document.createElement('ul');
 
-  containerTitle.innerText = 'Bem-vind@ ao aquecimento da unidade curricular';
+  containerTitle.innerText = 'Bem-vindo(a) ao aquecimento da unidade curricular';
   containerTitle.classList.add('title');
 
   instructions.innerText = `Clique em 'Adicionar' para adicionar uma nova pessoa`;
